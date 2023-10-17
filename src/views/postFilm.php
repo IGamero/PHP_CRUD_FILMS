@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Agregar Película</title>
-</head>
-
-<body>
-    <h1>Agregar Película</h1>
-    <form method="post" action="index.php?action=post">
-        Título: <input type="text" name="title"><br>
-        Descripción: <textarea name="description"></textarea><br>
-        Año: <input type="text" name="year"><br>
-        <input type="submit" value="Agregar">
-    </form>
-</body>
-
-</html>
+<section id="section-film-form" style="display: none;">
+    <div class="container">
+        <h1>Agregar Película</h1>
+        <form id="film-form">
+            Título: <input type=" text" id="title" required name="title"><br>
+            Descripción: <textarea id="description" required name="description"></textarea><br>
+            Año: <input type="number" id="year" required name="year" max="9999"><br>
+            <div class="button">
+                <input type="submit" value="Añadir Pelicula">
+            </div>
+        </form>
+    </div>
+</section>

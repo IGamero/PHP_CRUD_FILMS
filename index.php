@@ -1,32 +1,28 @@
-<?php
-require_once('config.php');
-require_once('./src/Controllers/FilmController.php');
+<!DOCTYPE html>
+<html lang="en">
 
-if (isset($_GET['action'])) {
-    $action = $_GET['action'];
-} else {
-    $action = 'get'; // acción predeterminada (get películas)
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUP - Peliculas</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
 
-$controller = new FilmController($conn);
+<body>
+    <?php
+    require_once('config.php');
+    // require_once('./src/Controllers/FilmController.php');
+    
 
-if ($action === 'post') {
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $title = $_POST['title'];
-        $description = $_POST['description'];
-        $year = $_POST['year'];
-
-        $resultado = $controller->newFilm($title, $description, $year);
-        if ($resultado) {
-            header("Location: index.php");
-        }
-    }
+    require('./src/views/getFilms.php');
 
     require('./src/views/postFilm.php');
-} elseif ($action === 'get') {
-    // Agregar código para get películas aquí
-    require('./src/views/getFilms.php');
-} else {
-    // Manejo de otras actiones (editar, eliminar, etc.)
-}
-?>
+
+    ?>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./static/js/filmsForm.js"></script>
+</body>
+
+</html>

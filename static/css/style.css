@@ -1,0 +1,61 @@
+/* FILMS LIST */
+#section-films-list {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#section-films-list .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#film-list {
+    width: 80%;
+    margin: auto;
+}
+
+#film-list .list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+#film-list .list-header {
+    font-weight: bold;
+}
+
+#film-list .list .list-block {
+    width: 100%;
+    text-align: center;
+}
+
+#film-list .list-block-actions {
+    max-width: 120px;
+}
+
+/* FILMS FORM */
+
+#section-film-form {
+}
+
+#section-film-form .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#section-film-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#section-film-form .button {
+    display: flex;
+    justify-content: center;
+}
